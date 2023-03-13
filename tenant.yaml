@@ -98,7 +98,7 @@ clients:
       rotation_type: non-rotating
     sso_disabled: false
     token_endpoint_auth_method: client_secret_post
-  - name: Storytime
+  - name: Storytime22
     allowed_logout_urls:
       - https://storytime.oktademo.app
       - https://*.storytime.oktademo.app
