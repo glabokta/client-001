@@ -5,6 +5,9 @@ pages:
   - name: login
     enabled: true
     html: ./pages/login.html
+  - name: app1_login
+	  enabled: true
+	  html: ./pages/MyAccountLinkingApp.html
 resourceServers:
   - name: Demonstration
     identifier: demonstration
