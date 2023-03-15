@@ -5,7 +5,7 @@ pages:
   - name: login
     enabled: true
     html: ./pages/login.html
-  - name: app1_login
+  - name: error_page
     enabled: true
     html: ./pages/MyAccountLinkingApp.html
 resourceServers:
