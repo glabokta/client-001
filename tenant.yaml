@@ -6,7 +6,6 @@ pages:
     enabled: true
     html: ./pages/login.html
   - name: error_page
-    enabled: true
     html: ./pages/MyAccountLinkingApp.html
 resourceServers:
   - name: Demonstration
