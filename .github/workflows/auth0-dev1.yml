@@ -1,4 +1,4 @@
-name: Deploy to Auth0 staging account
+name: Deploy to Auth0 tenant2 account
 on:
   push:
     branches: 
