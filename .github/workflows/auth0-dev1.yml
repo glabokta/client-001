@@ -1,8 +1,7 @@
-name: Deploy to Auth0 tenant2 account
+name: Deploy to Auth0 tenant1 account
 on:
   push:
-    branches: 
-      - main
+    paths: 
       - '**/tenant1/*.html'
 
 jobs:

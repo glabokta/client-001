@@ -1,8 +1,7 @@
 name: Deploy to Auth0 Tenant2 account
 on:
   push:
-    branches: 
-      - main
+    paths: 
       - '**/tenant2/login.html'
 
 jobs:
