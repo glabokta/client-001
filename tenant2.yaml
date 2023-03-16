@@ -210,7 +210,7 @@ clients:
       - https://storytime.oktademo.app
       - https://*.storytime.oktademo.app
     allowed_origins:
-      - https://demo-orgs.storytime.oktademo.app/context/set
+      - https://kanye-west.storytime.oktademo.app/context/set
     app_type: regular_web
     callbacks:
       - https://storytime.oktademo.app/callback
@@ -247,7 +247,7 @@ clients:
       - https://storytime.oktademo.app
       - https://*.storytime.oktademo.app
     allowed_origins:
-      - https://demo-orgs.storytime.oktademo.app/context/set
+      - https://kanye-west.storytime.oktademo.app/context/set
     app_type: regular_web
     callbacks:
       - https://storytime.oktademo.app/callback
@@ -284,7 +284,7 @@ clients:
       - https://storytime.oktademo.app
       - https://*.storytime.oktademo.app
     allowed_origins:
-      - https://demo-orgs.storytime.oktademo.app/context/set
+      - https://kanye-west.storytime.oktademo.app/context/set
     app_type: regular_web
     callbacks:
       - https://storytime.oktademo.app/callback
@@ -321,7 +321,7 @@ clients:
       - https://storytime.oktademo.app
       - https://*.storytime.oktademo.app
     allowed_origins:
-      - https://demo-orgs.storytime.oktademo.app/context/set
+      - https://kanye-west.storytime.oktademo.app/context/set
     app_type: regular_web
     callbacks:
       - https://storytime.oktademo.app/callback
@@ -533,7 +533,7 @@ connections:
       should_trust_email_verified_connection: never_set_emails_as_verified
     show_as_button: false
 tenant:
-  default_audience: https://demo-orgs.cic-demo-platform.auth0app.com/api/v2/
+  default_audience: https://kanye-west.cic-demo-platform.auth0app.com/api/v2/
   enabled_locales:
     - en
   flags:
@@ -560,7 +560,7 @@ emailTemplates:
     urlLifetimeInSeconds: 432000
 clientGrants:
   - client_id: API Explorer Application
-    audience: https://demo-orgs.cic-demo-platform.auth0app.com/api/v2/
+    audience: https://kanye-west.cic-demo-platform.auth0app.com/api/v2/
     scope:
       - read:client_grants
       - create:client_grants
@@ -698,7 +698,7 @@ clientGrants:
       - read:organization_invitations
       - delete:organization_invitations
   - client_id: Auth0 Dashboard Backend Management Client
-    audience: https://demo-orgs.cic-demo-platform.auth0app.com/api/v2/
+    audience: https://kanye-west.cic-demo-platform.auth0app.com/api/v2/
     scope:
       - read:client_grants
       - create:client_grants
@@ -836,7 +836,7 @@ clientGrants:
       - read:organization_invitations
       - delete:organization_invitations
   - client_id: Demo Platform Management
-    audience: https://demo-orgs.cic-demo-platform.auth0app.com/api/v2/
+    audience: https://kanye-west.cic-demo-platform.auth0app.com/api/v2/
     scope:
       - read:client_grants
       - create:client_grants
@@ -974,7 +974,7 @@ clientGrants:
       - delete:owner
       - delete:tenants
   - client_id: Storytime
-    audience: https://demo-orgs.cic-demo-platform.auth0app.com/api/v2/
+    audience: https://kanye-west.cic-demo-platform.auth0app.com/api/v2/
     scope:
       - read:users
       - update:users

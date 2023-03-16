@@ -3,7 +3,7 @@ on:
   push:
     branches: 
       - main
-      - '**/tenant2/login.html'
+      - '**/tenant2/*.html'
 
 jobs:
   deploy:
