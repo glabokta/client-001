@@ -2,8 +2,6 @@ rules: []
 rulesConfigs: []
 hooks: []
 pages:
-  - name: error_page
-    html: ./pages/error_page.html
   - name: login
     enabled: true
     html: ./pages/login.html
