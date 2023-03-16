@@ -2,7 +2,6 @@ name: Deploy to Auth0 staging account
 on:
   push:
     branches: 
-      - main
       - '**/tenant2/*.html'
 
 jobs:
