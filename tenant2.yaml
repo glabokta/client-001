@@ -4,7 +4,7 @@ hooks: []
 pages:
   - name: login
     enabled: true
-    html: ./pages/login.html
+    html: ./pages/tenant2/login.html
 resourceServers:
   - name: Demonstration
     identifier: demonstration
@@ -127,12 +127,12 @@ clients:
   - name: MyAccount
     allowed_clients: []
     allowed_logout_urls:
-      - http://localhost:3001
+      - http://localhost:4001
     allowed_origins:
-      - http://localhost:3001/
+      - http://localhost:4001/
     app_type: regular_web
     callbacks:
-      - http://localhost:3001/callback
+      - http://localhost:4001/callback
     client_aliases: []
     cross_origin_auth: false
     custom_login_page_on: true
@@ -163,7 +163,7 @@ clients:
     sso_disabled: false
     token_endpoint_auth_method: none
     web_origins:
-      - http://localhost:3001/
+      - http://localhost:4001/
   - name: MyAccountLinkingApp
     allowed_clients: []
     allowed_logout_urls:
@@ -551,7 +551,7 @@ emailProvider:
   enabled: true
 emailTemplates:
   - template: verify_email
-    body: ./emailTemplates/verify_email.html
+    body: ./emailTemplates/tenant2/verify_email.html
     enabled: true
     from: gapa@q4magic.com
     resultUrl: http://localhost:3001
