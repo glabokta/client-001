@@ -2,7 +2,7 @@
     "scripts": {
       "export:dev": "a0deploy export --strip --format yaml --output_folder . --config_file ./config.json",
       "import:dev": "a0deploy import --input_file tenant.yaml --config_file ./config.json",
-      "import:dev-tenant1": "a0deploy import --input_file ./tenants/tenant1.yaml --config_file ./config-tenant1.json",
-      "import:dev-tenant2": "a0deploy import --input_file ./tenants/tenant2.yaml --config_file ./config-tenant2.json"
+      "import:dev-tenant1": "a0deploy import --input_file ./tenants/tenant1/tenant1.yaml --config_file ./tenant1/config-tenant1.json",
+      "import:dev-tenant2": "a0deploy import --input_file ./tenants/tenant2/tenant2.yaml --config_file ./tenant2/config-tenant2.json"
     }
 }
