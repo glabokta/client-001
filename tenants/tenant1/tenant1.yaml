@@ -5,6 +5,9 @@ pages:
   - name: login
     enabled: true
     html: ./pages/tenant1/login.html
+  - name: password_reset
+    enabled: true
+    html: ./pages/tenant1/password_reset.html
 resourceServers:
   - name: Demonstration
     identifier: demonstration
