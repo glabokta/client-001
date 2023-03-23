@@ -548,8 +548,6 @@ tenant:
   universal_login: {}
 emailProvider:
   name: sendgrid
-  credentials:
-    api_key: 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
   default_from_address: gapa@q4magic.com
   enabled: true
 emailTemplates:
