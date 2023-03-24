@@ -4,7 +4,7 @@ hooks: []
 pages:
   - name: guardian_multifactor
     enabled: true
-    html: ./pages/guardian_multifactor.html
+    html: ./pages/tenant1/guardian_multifactor.html
   - name: login
     enabled: true
     html: ./pages/tenant1/login.html
