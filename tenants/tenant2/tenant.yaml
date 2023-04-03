@@ -67,7 +67,6 @@ databases:
     enabled_clients:
       - Default App
       - DeployCLI
-      - SampleApp
     is_domain_connection: false
     options:
       mfa:
@@ -84,7 +83,6 @@ connections:
     enabled_clients:
       - Default App
       - DeployCLI
-      - SampleApp
     is_domain_connection: false
     options:
       email: true
