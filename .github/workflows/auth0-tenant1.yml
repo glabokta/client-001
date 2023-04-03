@@ -1,7 +1,8 @@
-name: Deploy to Auth0 staging account
+name: Deploy to Auth0 tenant1 account
 on:
   push:
-    branches: '**/README.md'
+    paths: 
+      - '**/tenant1/**/*.html'
 
 jobs:
   deploy:
@@ -16,5 +17,4 @@ jobs:
       - name: Install the auth0-deploy-cli
         run: npm install -g auth0-deploy-cli
       - name: Import changes to the Auth0 staging account
-        run: npm run import:dev-tenant1
-        run: npm run import:dev-tenant2
+        run: npm run import:tenant1
