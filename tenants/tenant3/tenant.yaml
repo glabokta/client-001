@@ -144,6 +144,8 @@ tenant:
   sandbox_version: '16'
 emailProvider:
   name: sendgrid
+  credentials:
+    api_key: '##SENDGRID_API_KEY##'
   default_from_address: gapa@q4magic.com
   enabled: true
 emailTemplates:
