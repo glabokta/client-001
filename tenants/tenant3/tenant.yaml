@@ -92,7 +92,7 @@ connections:
       profile: true
 tenant:
   enabled_locales:
-    - en
+    - fr
   flags:
     universal_login: true
     revoke_refresh_token_grant: false
