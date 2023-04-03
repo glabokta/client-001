@@ -1,4 +1,4 @@
-name: Deploy to Auth0 Tenant2 account
+name: Deploy to Auth0 Tenant3 account
 on:
   push:
     paths: 
