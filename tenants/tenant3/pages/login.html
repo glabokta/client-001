@@ -1,194 +1,385 @@
-<!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Sign In with Auth0</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-</head>
-  <style>
-    body, html {
-      height: 100%;
-      background-color: #f9f9f9; 
-    } 
+    <title>Sign up or sign in</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href=https://authx-assets-dev.azureedge.net/assets/universal-logo-150x150.png sizes="32x32">
 
-    .login-container {
-      position: relative;
-      height: 100%;
-    }
-
-    .login-box {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      padding: 15px;
-      background-color: #fff;
-      box-shadow: 0px 5px 5px #ccc;
-      border-radius: 5px;
-      border-top: 1px solid #e9e9e9;
-    }
-
-    .login-header {
-      text-align: center;
-    }
-
-    .login-header img {
-      width: 75px;
-    }
-
-    #error-message {
-      display: none;
-      white-space: break-spaces;
-    }
-  </style>
-<body>
-  <div class="login-container">
-    <div class="col-xs-12 col-sm-4 col-sm-offset-4 login-box">
-      <div class="login-header">
-        <img src="https://cdn.auth0.com/styleguide/1.0.0/img/badge.svg"/>
-        <h3>Welcome</h3>
-        <h5>Demo With Narayan t03 April 3 8:26am  - - PLEASE LOG IN</h5>
-      </div>
-      <div id="error-message" class="alert alert-danger"></div>
-      <form onsubmit="return false;" method="post">
-        <div class="form-group">
-         <label for="name">Email</label>
-          <input
-            type="email"
-            class="form-control"
-            id="email"
-            placeholder="Enter your email">
-        </div>
-        <div class="form-group">
-          <label for="name">Password</label>
-          <input
-            type="password"
-            class="form-control"
-            id="password"
-            placeholder="Enter your password">
-        </div>
-        <div class="captcha-container form-group"></div>
-        <button
-          type="submit"
-          id="btn-login"
-          class="btn btn-primary btn-block">
-            Log In
-        </button>
-        <button
-          type="button"
-          id="btn-signup"
-          class="btn btn-default btn-block">
-            Sign Up
-        </button>
-        <hr>
-        <button
-          type="button"
-          id="btn-google"
-          class="btn btn-default btn-danger btn-block">
-            Log In with Google
-        </button>
-      </form>
-    </div>
-  </div>
-
-  <!--[if IE 8]>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/ie8/0.2.5/ie8.js"></script>
-  <![endif]-->
-
-  <!--[if lte IE 9]>
-  <script src="https://cdn.auth0.com/js/polyfills/1.0/base64.min.js"></script>
-  <script src="https://cdn.auth0.com/js/polyfills/1.0/es5-shim.min.js"></script>
-  <![endif]-->
-
-  <script src="https://cdn.auth0.com/js/auth0/9.18/auth0.min.js"></script>
-  <script src="https://cdn.auth0.com/js/polyfills/1.0/object-assign.min.js"></script>
-  <script>
-    window.addEventListener('load', function() {
-
-      var config = JSON.parse(
-        decodeURIComponent(escape(window.atob('@@config@@')))
-      );
-
-      var leeway = config.internalOptions.leeway;
-      if (leeway) {
-        var convertedLeeway = parseInt(leeway);
-      
-        if (!isNaN(convertedLeeway)) {
-          config.internalOptions.leeway = convertedLeeway;
+    <style>
+        @import url(https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.5/css/bootstrap.min.css);
+        @import url(https://fonts.googleapis.com/css2?family=Glegoo:wght@400;700&amp;display=swap);
+        @import url(https://azr47-us-authx-ui-devlocal.azurewebsites.net/03781782-2c30-4e75-b72e-9afb59c17d4d/css/site.css);
+        
+        @import url("https://azr47-us-authx-ui-devlocal.azurewebsites.net/03781782-2c30-4e75-b72e-9afb59c17d4d/css/default_signup_signin.css");
+        body,
+        .page {
+            /*height: 100vh !important;*/
+            /* You must set a specified height */
+            background-position: center;
+            /* Center the image */
+            background-repeat: no-repeat;
+            /* Do not repeat the image */
+            background-size: cover;
+            /* Resize the background image to cover the entire container */
         }
+    </style>
+
+</head>
+
+<body style="">
+
+    <noscript>
+        <div id="no_js">
+            <div class="error_container">
+                <div>
+                    <h1>We can't sign you in</h1>
+                    <p>
+                        Your browser is currently set to block JavaScript. You need to allow JavaScript to use this
+                        service.
+                    </p>
+                    <p>
+                        To learn how to allow JavaScript or to find out whether your browser supports JavaScript, check
+                        the online help in your web browser.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </noscript>
+    <div id="no_cookie" class="no_display">
+
+        <div class="error_container">
+
+            <div>
+
+                <h1>We can't sign you in</h1>
+                <p>Your browser is currently set to block cookies. You need to allow cookies to use this service.</p>
+                <p>
+                    Cookies are small text files stored on your computer that tell us when you're signed in. To learn how
+                    to allow cookies, check the online help in your web browser.
+                </p>
+
+                <script nonce="kkHXhu2FN3zC8wLLM/snBQ==">if (!navigator.cookieEnabled) document.getElementById('no_cookie').className = ''; if (typeof $diags !== 'undefined') $diags.initializationSuccessful = true;</script>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <noscript>
+        <div id="no_js">
+            <div class="error_container">
+                <div>
+                    <h1>We can't sign you in</h1>
+                    <p>
+                        Your browser is currently set to block JavaScript. You need to allow JavaScript to use this
+                        service.
+                    </p>
+                    <p>
+                        To learn how to allow JavaScript or to find out whether your browser supports JavaScript, check
+                        the online help in your web browser.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </noscript>
+    <div id="no_cookie" class="no_display">
+        <div class="error_container">
+            <div>
+                <h1>We can't sign you in</h1>
+                <p>Your browser is currently set to block cookies. You need to allow cookies to use this service.</p>
+                <p>
+                    Cookies are small text files stored on your computer that tell us when you're signed in. To learn how
+                    to allow cookies, check the online help in your web browser.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <img data-tenant-branding-background="true"
+         src=https://azr47-us-authx-ui-devlocal.azurewebsites.net/03781782-2c30-4e75-b72e-9afb59c17d4d/BackgroundImage/oscar-keys-medium.jpg>
+
+    <div class="panel-body">
+
+        <div class="container">
+
+            <div class="row company-logo">
+
+                <img data-tenant-branding-logo="true"
+                     src=https://azr47-us-authx-ui-devlocal.azurewebsites.net/03781782-2c30-4e75-b72e-9afb59c17d4d/Logo/umg-logo%402x.png>
+
+            </div>
+
+            <div id="api" data-name="Unified" class="row">
+
+                <div class="col-lg-6 col-md-6 col-xs-12 local-container">
+<form onsubmit="return false;" method="post">
+          <div class="form-group">
+            <label for="name">Email</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              placeholder="Enter your email"
+            />
+          </div>
+          <div class="form-group">
+            <label for="name">Password</label>
+            <input
+              type="password"
+              class="form-control"
+              id="password"
+              placeholder="Enter your password"
+            />
+          </div>
+          <div class="captcha-container form-group"></div>
+          <button
+            type="submit"
+            id="btn-login"
+            class="btn btn-primary btn-block"
+          >
+            Log In
+          </button>
+          <!-- <button
+            type="button"
+            id="btn-signup"
+            class="btn btn-default btn-block"
+          >
+            Sign Up
+          </button> -->
+          <hr />
+          <!-- <button
+            type="button"
+            id="btn-google"
+            class="btn btn-default btn-danger btn-block"
+          >
+            Log In with Google
+          </button> -->
+          <a href="#" onclick="showPasswordResetForm();"
+            >Forgot your password?</a
+          >
+        </form>
+        <!--add this form for password reset-->
+        <form id="password-reset-form" style="display: none">
+          <div class="form-group">
+            <label for="reset-email">Email</label>
+            <input
+              type="email"
+              class="form-control"
+              id="reset-email"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+          <button
+            type="submit"
+            id="btn-reset-password"
+            class="btn btn-primary btn-block change_password"
+          >
+            Reset Password
+          </button>
+          <button
+            type="button"
+            id="btn-cancel-reset"
+            class="btn btn-default btn-block"
+            onclick="hidePasswordResetForm();"
+          >
+            Cancel
+          </button>
+        </form>
+
+                </div>
+                <div class="social col-lg-6 col-md-6 col-xs-12" aria-label="Sign in using another account" role="form">
+                    <div class="intro">
+                        <h2>Sign in using another account</h2>
+                    </div><label id="account_title_signin" class="social-title">Select an account to sign in</label>
+                    <div class="options">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 social-button">
+                            <button class="accountButton firstButton" id="FacebookExchange">Facebook</button>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 social-button">
+                            <button class="accountButton" id="SpotifyExchange">Spotify</button>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 social-button">
+                            <button class="accountButton" id="AppleExchange">Apple</button>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 social-button">
+                            <button class="accountButton" id="TwitterExchange">Twitter</button>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 social-button">
+                            <button class="accountButton" id="btn-google">Google</button>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 social-button">
+                            <button class="accountButton" id="AmazonExchange">Amazon</button>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 social-button">
+                            <button class="accountButton" id="MicrosoftAccountExchange">Microsoft</button>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 social-button">
+                            <button class="accountButton" id="DiscordExchange">Discord</button>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 social-button">
+                            <button class="accountButton" id="LineExchange">Line</button>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 social-button">
+                            <button class="accountButton" id="AmazonjpExchange">Amazon Jp</button>
+                        </div>
+                        <div>
+                        </div>
+                    </div>
+                </div>
+           
+                <div class="divider">
+                    <h2>OR</h2>
+                </div>
+            </div>
+            <div class="row margin-bottom margin-top">
+                <span class="footer-text">
+                    By submitting, you agree to the <a href=https://privacypolicy.umusic.com/
+                                                       target="_blank">Universal Music Group Privacy Policy</a>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript"
+            src=https://azr47-us-authx-ui-devlocal.azurewebsites.net/03781782-2c30-4e75-b72e-9afb59c17d4d/js/site.js
+            data-preload="true"></script>
+    <script type="text/javascript"
+            src=https://azr47-us-authx-ui-devlocal.azurewebsites.net/03781782-2c30-4e75-b72e-9afb59c17d4d/js/default_signup_signin.js
+            data-preload="true"></script>
+    <script type="text/javascript"
+            src=https://azr47-us-authx-ui-devlocal.azurewebsites.net/03781782-2c30-4e75-b72e-9afb59c17d4d/js/common.js
+            data-preload="true"></script>
+    <script src="https://cdn.auth0.com/js/auth0/9.18/auth0.min.js"></script>
+    <script src="https://cdn.auth0.com/js/polyfills/1.0/object-assign.min.js"></script>
+  <script>
+      function showPasswordResetForm() {
+        document.querySelector("form").style.display = "none";
+        document.getElementById("password-reset-form").style.display = "block";
       }
+      function hidePasswordResetForm() {
+        document.getElementById("password-reset-form").style.display = "none";
+        document.querySelector("form").style.display = "block";
+      }
+    </script>
+    <script>
+        window.addEventListener('load', function () {
 
-      var params = Object.assign({
-        overrides: {
-          __tenant: config.auth0Tenant,
-          __token_issuer: config.authorizationServer.issuer
-        },
-        domain: config.auth0Domain,
-        clientID: config.clientID,
-        redirectUri: config.callbackURL,
-        responseType: 'code'
-      }, config.internalOptions);
+            var config = JSON.parse(
+                decodeURIComponent(escape(window.atob('@@config@@')))
+            );
 
-      var webAuth = new auth0.WebAuth(params);
-      var databaseConnection = 'Username-Password-Authentication';
-      var captcha = webAuth.renderCaptcha(
-        document.querySelector('.captcha-container')
-      );
+            var leeway = config.internalOptions.leeway;
+            if (leeway) {
+                var convertedLeeway = parseInt(leeway);
 
-      function login(e) {
-        e.preventDefault();
-        var button = this;
-        var username = document.getElementById('email').value;
-        var password = document.getElementById('password').value;
-        button.disabled = true;
-        webAuth.login({
-          realm: databaseConnection,
-          username: username,
-          password: password,
-          captcha: captcha.getValue()
-        }, function(err) {
-          if (err) displayError(err);
-          button.disabled = false;
+                if (!isNaN(convertedLeeway)) {
+                    config.internalOptions.leeway = convertedLeeway;
+                }
+            }
+
+            var params = Object.assign({
+                overrides: {
+                    __tenant: config.auth0Tenant,
+                    __token_issuer: config.authorizationServer.issuer
+                },
+                domain: config.auth0Domain,
+                clientID: config.clientID,
+                redirectUri: config.callbackURL,
+                responseType: 'code'
+            }, config.internalOptions);
+
+            var webAuth = new auth0.WebAuth(params);
+            var databaseConnection = 'Username-Password-Authentication';
+            var captcha = webAuth.renderCaptcha(
+                document.querySelector('.captcha-container')
+            );
+
+            function login(e) {
+                e.preventDefault();
+                var button = this;
+                var username = document.getElementById('email').value;
+                var password = document.getElementById('password').value;
+                button.disabled = true;
+                webAuth.login({
+                    realm: databaseConnection,
+                    username: username,
+                    password: password,
+                    captcha: captcha.getValue()
+                }, function (err) {
+                    //if (err) displayError(err);
+                    button.disabled = false;
+                });
+            }
+
+            // function signup() {
+            //     var button = this;
+            //     var email = document.getElementById('email').value;
+            //     var password = document.getElementById('password').value;
+
+            //     button.disabled = true;
+            //     webAuth.redirect.signupAndLogin({
+            //         connection: databaseConnection,
+            //         email: email,
+            //         password: password,
+            //         captcha: captcha.getValue()
+            //     }, function (err) {
+            //         if (err) displayError(err);
+            //         button.disabled = false;
+            //     });
+            // }
+
+            function loginWithGoogle() {
+                webAuth.authorize({
+                    connection: 'google-oauth2'
+                }, function (err) {
+                    if (err) displayError(err);
+                });
+            }
+          
+           // add this password reset
+        function resetPassword(event) {
+          event.preventDefault(); // Prevent the form from submitting by default
+          webAuth.changePassword(
+            {
+              connection: databaseConnection,
+              email: document.getElementById("reset-email").value,
+            },
+            function (err, resp) {
+              if (err) {
+                console.log(err.message);
+              } else {
+                console.log(resp);
+                // Redirect the user to a different page after a successful password reset request
+                window.location.href = "http://localhost:3002/";
+              }
+            }
+          );
+        }
+
+            function displayError(err) {
+                captcha.reload();
+                var errorMessage = document.getElementById('error-message');
+                /*   errorMessage.innerHTML = err.policy || err.description;*/
+                errorMessage.style.display = 'block';
+            }
+
+            document.getElementById('btn-login').addEventListener('click', login);
+            document.getElementById('btn-google').addEventListener('click', loginWithGoogle);
+            // document.getElementById('btn-signup').addEventListener('click', signup);
+          // password reset
+        document
+          .getElementById("btn-reset-password")
+          .addEventListener("click", resetPassword);
         });
-      }
+    </script>
+    <div id="piggyWrapper"
+         style="position: fixed; top: 0px; right: 0px; line-height: initial; z-index: 2147483647; width: auto; font-family: &quot; Open Sans&quot;, sans-serif; font-size: initial; display: block;">
+    </div>
 
-      function signup() {
-        var button = this;
-        var email = document.getElementById('email').value;
-        var password = document.getElementById('password').value;
-
-        button.disabled = true;
-        webAuth.redirect.signupAndLogin({
-          connection: databaseConnection,
-          email: email,
-          password: password,
-          captcha: captcha.getValue()
-        }, function(err) {
-          if (err) displayError(err);
-          button.disabled = false;
-        });
-      }
-
-      function loginWithGoogle() {
-        webAuth.authorize({
-          connection: 'google-oauth2'
-        }, function(err) {
-          if (err) displayError(err);
-        });
-      }
-
-      function displayError(err) {
-        captcha.reload();
-        var errorMessage = document.getElementById('error-message');
-        errorMessage.innerHTML = err.policy || err.description;
-        errorMessage.style.display = 'block';
-      }
-
-      document.getElementById('btn-login').addEventListener('click', login);
-      document.getElementById('btn-google').addEventListener('click', loginWithGoogle);
-      document.getElementById('btn-signup').addEventListener('click', signup);
-    });
-  </script>
 </body>
+
 </html>

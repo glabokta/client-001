@@ -3,6 +3,7 @@ on:
   push:
     paths: 
       - '**/tenant1/**/*.html'
+      - '**/tenant1/**/*.yaml'
 
 jobs:
   deploy:

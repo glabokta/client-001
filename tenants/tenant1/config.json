@@ -2,7 +2,7 @@
   "AUTH0_DOMAIN": "umg-poc-t01.us.auth0.com",
   "AUTH0_CLIENT_ID": "e9wscmACSnIL5qVvyBqodFZUjPgIA2F9",
   "AUTH0_CLIENT_SECRET": "gwCEDkJLJsrAUCkwtqZXjMmI0tJad1Q2tRBQeDZW9ly2bAK5BC3rm0jugFyBJW5Q",
-  "AUTH0_EXCLUDED": ["clients"],
+  "AUTH0_EXCLUDED": ["clients", "databases", "connections"],
   "EXCLUDED_PROPS": {
     "emailProvider": ["credentials.api_key"]
   }
