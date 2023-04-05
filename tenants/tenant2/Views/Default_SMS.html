@@ -1,0 +1,368 @@
+﻿<html lang="en">
+<head>
+    <title>MFA-SMS</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href=https://authx-assets-dev.azureedge.net/assets/universal-logo-150x150.png sizes="32x32">
+    <style>
+        @import url(https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.5/css/bootstrap.min.css);
+        @import url(https://fonts.googleapis.com/css2?family=Glegoo:wght@400;700&amp;display=swap);
+        @import url(https://azr47-us-authx-ui-devlocal.azurewebsites.net/c7f3fc1f-8741-4151-bbb6-8b2059c4fff1/css/site.css);
+        @import url(https://azr47-us-authx-ui-devlocal.azurewebsites.net/c7f3fc1f-8741-4151-bbb6-8b2059c4fff1/css/default_SMS.css);
+        @import url(https://azr47-us-authx-ui-devlocal.azurewebsites.net/c7f3fc1f-8741-4151-bbb6-8b2059c4fff1/css/mfa_phone.css);
+        @import url(https://azr47-us-authx-ui-devlocal.azurewebsites.net/c7f3fc1f-8741-4151-bbb6-8b2059c4fff1/js/Default_SMS.js);
+
+        body,
+        .page {
+            /*height: 100vh !important;*/
+            /* You must set a specified height */
+            background-position: center;
+            /* Center the image */
+            background-repeat: no-repeat;
+            /* Do not repeat the image */
+            background-size: cover;
+            /* Resize the background image to cover the entire container */
+            color: #fff;
+        }
+    </style>
+</head>
+<body style="">
+    <img data-tenant-branding-background="true" src=https://azr47-us-authx-ui-devlocal.azurewebsites.net/c7f3fc1f-8741-4151-bbb6-8b2059c4fff1/BackgroundImage/oscar-keys-medium1.jpg>
+    <div class="panel-body">
+        <div class="container  self_asserted_container ">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <!-- <img alt="Company Logo" class="companyLogo" data-tenant-branding-logo="true" src=https://authx-assets-dev.azureedge.net/assets/umg-logo%402x.png>-->
+
+                            <img style="height:120px" src="https://azr47-us-authx-ui-devlocal.azurewebsites.net/c7f3fc1f-8741-4151-bbb6-8b2059c4fff1/Logo/logo.ee7cd8ed.svg" class="App-logo" alt="logo">
+
+
+
+                            <div id="api" data-name="SelfAsserted">
+                                <div class="intro">
+                                    <p>Please provide the following details.</p>
+                                </div>
+                                <!-- <form id="attributeVerification" data-id="registrationForm">-->
+                                <div class="page">
+                                    <div>
+                                        <div>
+                                            <div class="flex-container">
+                                                <div class="branding-template-logo-container">
+                                                    <!--<div class="org-logo">
+                                                        <img class="org-logo__image"
+                                                             src="https://images.complex.com/complex/images/c_fill,dpr_auto,f_auto,q_auto,w_1400/fl_lossy,pg_1/yxuawvogl8vagk0u3wrx/universal_music_group_logo?fimg-ssr"
+                                                             alt="Company Logo" />
+                                                    </div>-->
+                                                </div>
+                                                <div class="branding-template-form-container">
+                                                    <h1 class="heading branding-template-heading">
+                                                        {{#ifEquals type "SMS"}}
+                                                        <svg viewBox="0 0 24 24" role="presentation" style="width: 32px; height: 32px;">
+                                                            <path d="M20,2A2,2 0 0,1 22,4V16A2,2 0 0,1 20,18H6L2,22V4C2,2.89 2.9,2 4,2H20M4,4V17.17L5.17,16H20V4H4M6,7H18V9H6V7M6,11H15V13H6V11Z" style="fill: rgb(61, 69, 77);"></path>
+                                                        </svg>
+                                                        <span class="text-left-to-icon" style="color: #fff;">Text Message</span>
+                                                        {{/ifEquals}}
+                                                        {{#ifEquals type "VOICE"}}
+                                                        <svg viewBox="0 0 24 24" role="presentation" style="width: 32px; height: 32px;">
+                                                            <path d="M20,15.5C18.8,15.5 17.5,15.3 16.4,14.9C16.3,14.9 16.2,14.9 16.1,14.9C15.8,14.9 15.6,15 15.4,15.2L13.2,17.4C10.4,15.9 8,13.6 6.6,10.8L8.8,8.6C9.1,8.3 9.2,7.9 9,7.6C8.7,6.5 8.5,5.2 8.5,4C8.5,3.5 8,3 7.5,3H4C3.5,3 3,3.5 3,4C3,13.4 10.6,21 20,21C20.5,21 21,20.5 21,20V16.5C21,16 20.5,15.5 20,15.5M5,5H6.5C6.6,5.9 6.8,6.8 7,7.6L5.8,8.8C5.4,7.6 5.1,6.3 5,5M19,19C17.7,18.9 16.4,18.6 15.2,18.2L16.4,17C17.2,17.2 18.1,17.4 19,17.4V19Z" style="fill: rgb(61, 69, 77);"></path>
+                                                        </svg>
+                                                        <span class="text-left-to-icon">Voice</span>
+                                                        {{/ifEquals}}
+                                                    </h1>
+                                                    <div class="text-block branding-template-primary-text" style="color:white  ">
+                                                        <div class="text-block--overflow-wrap">
+                                                            Please provide the following details.
+                                                        </div>
+                                                    </div>
+                                                    <div data-skcomponent="skerror" class="feedback branding-template-feedback feedback--error picon-error-triangle" data-skvisibility=""></div>
+                                                    <form id="phone-form" class="form">
+                                                        <div>
+                                                            <div id="phone-input" class="phone-input" data-id="phone-input">
+                                                                <div id="phone-input-code" class="phone-input__code">
+                                                                    <div id="phone-input-code-dropdown" class="dropdown dropdown--search dropdown--standard">
+                                                                        <input class="dropdown__input" id="countryCodeInput" name="countryCodeInput" placeholder="" type="text" readonly="" />
+                                                                        <!--<ul id="code-dropdown-list" class="dropdown__list none">-->
+                                                                        <ul id="code-dropdown-list" class="list-none">
+                                                                            <li class="dropdown__option--search"><input id="search-input" class="text-input text-input--dropdown-search" data-id="text-input" placeholder="Search countries..." type="text" autocomplete="off" value=""><div id="close-list" class="dropdown__close"></div></li>
+                                                                            <span id="list-container" class="dropdown__option--container">
+                                                                            <li class="dropdown__option" value="af" role="button">Afghanistan (&#x202B;افغانستان&#x202C;&lrm;) +93</li>
+                                                                            <li class="dropdown__option" value="al" role="button">Albania (Shqipëri) +355</li>
+                                                                            <li class="dropdown__option" value="dz" role="button">Algeria (&#x202B;الجزائر&#x202C;&lrm;) +213</li>
+                                                                            <li class="dropdown__option" value="as" role="button">American Samoa +1</li>
+                                                                            <li class="dropdown__option" value="ad" role="button">Andorra +376</li>
+                                                                            <li class="dropdown__option" value="ao" role="button">Angola +244</li>
+                                                                            <li class="dropdown__option" value="ai" role="button">Anguilla +1</li>
+                                                                            <li class="dropdown__option" value="ag" role="button">Antigua and Barbuda +1</li>
+                                                                            <li class="dropdown__option" value="ar" role="button">Argentina +54</li>
+                                                                            <li class="dropdown__option" value="am" role="button">Armenia (Հայաստան) +374</li>
+                                                                            <li class="dropdown__option" value="aw" role="button">Aruba +297</li>
+                                                                            <li class="dropdown__option" value="au" role="button">Australia +61</li>
+                                                                            <li class="dropdown__option" value="at" role="button">Austria (Österreich) +43</li>
+                                                                            <li class="dropdown__option" value="az" role="button">Azerbaijan (Azərbaycan) +994</li>
+                                                                            <li class="dropdown__option" value="bs" role="button">Bahamas +1</li>
+                                                                            <li class="dropdown__option" value="bh" role="button">Bahrain (&#x202B;البحرين&#x202C;&lrm;) +973</li>
+                                                                            <li class="dropdown__option" value="bd" role="button">Bangladesh (বাংলাদেশ) +880</li>
+                                                                            <li class="dropdown__option" value="bb" role="button">Barbados +1</li>
+                                                                            <li class="dropdown__option" value="by" role="button">Belarus (Беларусь) +375</li>
+                                                                            <li class="dropdown__option" value="be" role="button">Belgium (België) +32</li>
+                                                                            <li class="dropdown__option" value="bz" role="button">Belize +501</li>
+                                                                            <li class="dropdown__option" value="bj" role="button">Benin (Bénin) +229</li>
+                                                                            <li class="dropdown__option" value="bm" role="button">Bermuda +1</li>
+                                                                            <li class="dropdown__option" value="bt" role="button">Bhutan (འབྲུག) +975</li>
+                                                                            <li class="dropdown__option" value="bo" role="button">Bolivia +591</li>
+                                                                            <li class="dropdown__option" value="ba" role="button">Bosnia and Herzegovina (Босна и Херцеговина) +387</li>
+                                                                            <li class="dropdown__option" value="bw" role="button">Botswana +267</li>
+                                                                            <li class="dropdown__option" value="br" role="button">Brazil (Brasil) +55</li>
+                                                                            <li class="dropdown__option" value="io" role="button">British Indian Ocean Territory +246</li>
+                                                                            <li class="dropdown__option" value="vg" role="button">British Virgin Islands +1</li>
+                                                                            <li class="dropdown__option" value="bn" role="button">Brunei +673</li>
+                                                                            <li class="dropdown__option" value="bg" role="button">Bulgaria (България) +359</li>
+                                                                            <li class="dropdown__option" value="bf" role="button">Burkina Faso +226</li>
+                                                                            <li class="dropdown__option" value="bi" role="button">Burundi (Uburundi) +257</li>
+                                                                            <li class="dropdown__option" value="kh" role="button">Cambodia (កម្ពុជា) +855</li>
+                                                                            <li class="dropdown__option" value="cm" role="button">Cameroon (Cameroun) +237</li>
+                                                                            <li class="dropdown__option" value="ca" role="button">Canada +1</li>
+                                                                            <li class="dropdown__option" value="cv" role="button">Cape Verde (Kabu Verdi) +238</li>
+                                                                            <li class="dropdown__option" value="bq" role="button">Caribbean Netherlands +599</li>
+                                                                            <li class="dropdown__option" value="ky" role="button">Cayman Islands +1</li>
+                                                                            <li class="dropdown__option" value="cf" role="button">Central African Republic (République centrafricaine) +236</li>
+                                                                            <li class="dropdown__option" value="td" role="button">Chad (Tchad) +235</li>
+                                                                            <li class="dropdown__option" value="cl" role="button">Chile +56</li>
+                                                                            <li class="dropdown__option" value="cn" role="button">China (中国) +86</li>
+                                                                            <li class="dropdown__option" value="cx" role="button">Christmas Island +61</li>
+                                                                            <li class="dropdown__option" value="cc" role="button">Cocos (Keeling) Islands +61</li>
+                                                                            <li class="dropdown__option" value="co" role="button">Colombia +57</li>
+                                                                            <li class="dropdown__option" value="km" role="button">Comoros (&#x202B;جزر القمر&#x202C;&lrm;) +269</li>
+                                                                            <li class="dropdown__option" value="cd" role="button">Congo (DRC) (Jamhuri ya Kidemokrasia ya Kongo) +243</li>
+                                                                            <li class="dropdown__option" value="cg" role="button">Congo (Republic) (Congo-Brazzaville) +242</li>
+                                                                            <li class="dropdown__option" value="ck" role="button">Cook Islands +682</li>
+                                                                            <li class="dropdown__option" value="cr" role="button">Costa Rica +506</li>
+                                                                            <li class="dropdown__option" value="ci" role="button">Côte d’Ivoire +225</li>
+                                                                            <li class="dropdown__option" value="hr" role="button">Croatia (Hrvatska) +385</li>
+                                                                            <li class="dropdown__option" value="cu" role="button">Cuba +53</li>
+                                                                            <li class="dropdown__option" value="cw" role="button">Curaçao +599</li>
+                                                                            <li class="dropdown__option" value="cy" role="button">Cyprus (Κύπρος) +357</li>
+                                                                            <li class="dropdown__option" value="cz" role="button">Czech Republic (Česká republika) +420</li>
+                                                                            <li class="dropdown__option" value="dk" role="button">Denmark (Danmark) +45</li>
+                                                                            <li class="dropdown__option" value="dj" role="button">Djibouti +253</li>
+                                                                            <li class="dropdown__option" value="dm" role="button">Dominica +1</li>
+                                                                            <li class="dropdown__option" value="do" role="button">Dominican Republic (República Dominicana) +1</li>
+                                                                            <li class="dropdown__option" value="ec" role="button">Ecuador +593</li>
+                                                                            <li class="dropdown__option" value="eg" role="button">Egypt (&#x202B;مصر&#x202C;&lrm;) +20</li>
+                                                                            <li class="dropdown__option" value="sv" role="button">El Salvador +503</li>
+                                                                            <li class="dropdown__option" value="gq" role="button">Equatorial Guinea (Guinea Ecuatorial) +240</li>
+                                                                            <li class="dropdown__option" value="er" role="button">Eritrea +291</li>
+                                                                            <li class="dropdown__option" value="ee" role="button">Estonia (Eesti) +372</li>
+                                                                            <li class="dropdown__option" value="et" role="button">Ethiopia +251</li>
+                                                                            <li class="dropdown__option" value="fk" role="button">Falkland Islands (Islas Malvinas) +500</li>
+                                                                            <li class="dropdown__option" value="fo" role="button">Faroe Islands (Føroyar) +298</li>
+                                                                            <li class="dropdown__option" value="fj" role="button">Fiji +679</li>
+                                                                            <li class="dropdown__option" value="fi" role="button">Finland (Suomi) +358</li>
+                                                                            <li class="dropdown__option" value="fr" role="button">France +33</li>
+                                                                            <li class="dropdown__option" value="gf" role="button">French Guiana (Guyane française) +594</li>
+                                                                            <li class="dropdown__option" value="pf" role="button">French Polynesia (Polynésie française) +689</li>
+                                                                            <li class="dropdown__option" value="ga" role="button">Gabon +241</li>
+                                                                            <li class="dropdown__option" value="gm" role="button">Gambia +220</li>
+                                                                            <li class="dropdown__option" value="ge" role="button">Georgia (საქართველო) +995</li>
+                                                                            <li class="dropdown__option" value="de" role="button">Germany (Deutschland) +49</li>
+                                                                            <li class="dropdown__option" value="gh" role="button">Ghana (Gaana) +233</li>
+                                                                            <li class="dropdown__option" value="gi" role="button">Gibraltar +350</li>
+                                                                            <li class="dropdown__option" value="gr" role="button">Greece (Ελλάδα) +30</li>
+                                                                            <li class="dropdown__option" value="gl" role="button">Greenland (Kalaallit Nunaat) +299</li>
+                                                                            <li class="dropdown__option" value="gd" role="button">Grenada +1</li>
+                                                                            <li class="dropdown__option" value="gp" role="button">Guadeloupe +590</li>
+                                                                            <li class="dropdown__option" value="gu" role="button">Guam +1</li>
+                                                                            <li class="dropdown__option" value="gt" role="button">Guatemala +502</li>
+                                                                            <li class="dropdown__option" value="gg" role="button">Guernsey +44</li>
+                                                                            <li class="dropdown__option" value="gn" role="button">Guinea (Guinée) +224</li>
+                                                                            <li class="dropdown__option" value="gw" role="button">Guinea-Bissau (Guiné Bissau) +245</li>
+                                                                            <li class="dropdown__option" value="gy" role="button">Guyana +592</li>
+                                                                            <li class="dropdown__option" value="ht" role="button">Haiti +509</li>
+                                                                            <li class="dropdown__option" value="hn" role="button">Honduras +504</li>
+                                                                            <li class="dropdown__option" value="hk" role="button">Hong Kong (香港) +852</li>
+                                                                            <li class="dropdown__option" value="hu" role="button">Hungary (Magyarország) +36</li>
+                                                                            <li class="dropdown__option" value="is" role="button">Iceland (Ísland) +354</li>
+                                                                            <li class="dropdown__option" value="in" role="button">India (भारत) +91</li>
+                                                                            <li class="dropdown__option" value="id" role="button">Indonesia +62</li>
+                                                                            <li class="dropdown__option" value="ir" role="button">Iran (&#x202B;ایران&#x202C;&lrm;) +98</li>
+                                                                            <li class="dropdown__option" value="iq" role="button">Iraq (&#x202B;العراق&#x202C;&lrm;) +964</li>
+                                                                            <li class="dropdown__option" value="ie" role="button">Ireland +353</li>
+                                                                            <li class="dropdown__option" value="im" role="button">Isle of Man +44</li>
+                                                                            <li class="dropdown__option" value="il" role="button">Israel (&#x202B;ישראל&#x202C;&lrm;) +972</li>
+                                                                            <li class="dropdown__option" value="it" role="button">Italy (Italia) +39</li>
+                                                                            <li class="dropdown__option" value="jm" role="button">Jamaica +1</li>
+                                                                            <li class="dropdown__option" value="jp" role="button">Japan (日本) +81</li>
+                                                                            <li class="dropdown__option" value="je" role="button">Jersey +44</li>
+                                                                            <li class="dropdown__option" value="jo" role="button">Jordan (&#x202B;الأردن&#x202C;&lrm;) +962</li>
+                                                                            <li class="dropdown__option" value="kz" role="button">Kazakhstan (Казахстан) +7</li>
+                                                                            <li class="dropdown__option" value="ke" role="button">Kenya +254</li>
+                                                                            <li class="dropdown__option" value="ki" role="button">Kiribati +686</li>
+                                                                            <li class="dropdown__option" value="xk" role="button">Kosovo (Republika e Kosovës) +383</li>
+                                                                            <li class="dropdown__option" value="kw" role="button">Kuwait (&#x202B;الكويت&#x202C;&lrm;) +965</li>
+                                                                            <li class="dropdown__option" value="kg" role="button">Kyrgyzstan (Кыргызстан) +996</li>
+                                                                            <li class="dropdown__option" value="la" role="button">Laos (ລາວ) +856</li>
+                                                                            <li class="dropdown__option" value="lv" role="button">Latvia (Latvija) +371</li>
+                                                                            <li class="dropdown__option" value="lb" role="button">Lebanon (&#x202B;لبنان&#x202C;&lrm;) +961</li>
+                                                                            <li class="dropdown__option" value="ls" role="button">Lesotho +266</li>
+                                                                            <li class="dropdown__option" value="lr" role="button">Liberia +231</li>
+                                                                            <li class="dropdown__option" value="ly" role="button">Libya (&#x202B;ليبيا&#x202C;&lrm;) +218</li>
+                                                                            <li class="dropdown__option" value="li" role="button">Liechtenstein +423</li>
+                                                                            <li class="dropdown__option" value="lt" role="button">Lithuania (Lietuva) +370</li>
+                                                                            <li class="dropdown__option" value="lu" role="button">Luxembourg +352</li>
+                                                                            <li class="dropdown__option" value="mo" role="button">Macau (澳門) +853</li>
+                                                                            <li class="dropdown__option" value="mk" role="button">Macedonia (FYROM) (Македонија) +389</li>
+                                                                            <li class="dropdown__option" value="mg" role="button">Madagascar (Madagasikara) +261</li>
+                                                                            <li class="dropdown__option" value="mw" role="button">Malawi +265</li>
+                                                                            <li class="dropdown__option" value="my" role="button">Malaysia +60</li>
+                                                                            <li class="dropdown__option" value="mv" role="button">Maldives +960</li>
+                                                                            <li class="dropdown__option" value="ml" role="button">Mali +223</li>
+                                                                            <li class="dropdown__option" value="mt" role="button">Malta +356</li>
+                                                                            <li class="dropdown__option" value="mh" role="button">Marshall Islands +692</li>
+                                                                            <li class="dropdown__option" value="mq" role="button">Martinique +596</li>
+                                                                            <li class="dropdown__option" value="mr" role="button">Mauritania (&#x202B;موريتانيا&#x202C;&lrm;) +222</li>
+                                                                            <li class="dropdown__option" value="mu" role="button">Mauritius (Moris) +230</li>
+                                                                            <li class="dropdown__option" value="yt" role="button">Mayotte +262</li>
+                                                                            <li class="dropdown__option" value="mx" role="button">Mexico (México) +52</li>
+                                                                            <li class="dropdown__option" value="fm" role="button">Micronesia +691</li>
+                                                                            <li class="dropdown__option" value="md" role="button">Moldova (Republica Moldova) +373</li>
+                                                                            <li class="dropdown__option" value="mc" role="button">Monaco +377</li>
+                                                                            <li class="dropdown__option" value="mn" role="button">Mongolia (Монгол) +976</li>
+                                                                            <li class="dropdown__option" value="me" role="button">Montenegro (Crna Gora) +382</li>
+                                                                            <li class="dropdown__option" value="ms" role="button">Montserrat +1</li>
+                                                                            <li class="dropdown__option" value="ma" role="button">Morocco (&#x202B;المغرب&#x202C;&lrm;) +212</li>
+                                                                            <li class="dropdown__option" value="mz" role="button">Mozambique (Moçambique) +258</li>
+                                                                            <li class="dropdown__option" value="mm" role="button">Myanmar (Burma) (မြန်မာ) +95</li>
+                                                                            <li class="dropdown__option" value="na" role="button">Namibia (Namibië) +264</li>
+                                                                            <li class="dropdown__option" value="nr" role="button">Nauru +674</li>
+                                                                            <li class="dropdown__option" value="np" role="button">Nepal (नेपाल) +977</li>
+                                                                            <li class="dropdown__option" value="nl" role="button">Netherlands (Nederland) +31</li>
+                                                                            <li class="dropdown__option" value="nc" role="button">New Caledonia (Nouvelle-Calédonie) +687</li>
+                                                                            <li class="dropdown__option" value="nz" role="button">New Zealand +64</li>
+                                                                            <li class="dropdown__option" value="ni" role="button">Nicaragua +505</li>
+                                                                            <li class="dropdown__option" value="ne" role="button">Niger (Nijar) +227</li>
+                                                                            <li class="dropdown__option" value="ng" role="button">Nigeria +234</li>
+                                                                            <li class="dropdown__option" value="nu" role="button">Niue +683</li>
+                                                                            <li class="dropdown__option" value="nf" role="button">Norfolk Island +672</li>
+                                                                            <li class="dropdown__option" value="kp" role="button">North Korea (조선 민주주의 인민 공화국) +850</li>
+                                                                            <li class="dropdown__option" value="mp" role="button">Northern Mariana Islands +1</li>
+                                                                            <li class="dropdown__option" value="no" role="button">Norway (Norge) +47</li>
+                                                                            <li class="dropdown__option" value="om" role="button">Oman (&#x202B;عُمان&#x202C;&lrm;) +968</li>
+                                                                            <li class="dropdown__option" value="pk" role="button">Pakistan (&#x202B;پاکستان&#x202C;&lrm;) +92</li>
+                                                                            <li class="dropdown__option" value="pw" role="button">Palau +680</li>
+                                                                            <li class="dropdown__option" value="ps" role="button">Palestine (&#x202B;فلسطين&#x202C;&lrm;) +970</li>
+                                                                            <li class="dropdown__option" value="pa" role="button">Panama (Panamá) +507</li>
+                                                                            <li class="dropdown__option" value="pg" role="button">Papua New Guinea +675</li>
+                                                                            <li class="dropdown__option" value="py" role="button">Paraguay +595</li>
+                                                                            <li class="dropdown__option" value="pe" role="button">Peru (Perú) +51</li>
+                                                                            <li class="dropdown__option" value="ph" role="button">Philippines +63</li>
+                                                                            <li class="dropdown__option" value="pl" role="button">Poland (Polska) +48</li>
+                                                                            <li class="dropdown__option" value="pt" role="button">Portugal +351</li>
+                                                                            <li class="dropdown__option" value="pr" role="button">Puerto Rico +1</li>
+                                                                            <li class="dropdown__option" value="qa" role="button">Qatar (&#x202B;قطر&#x202C;&lrm;) +974</li>
+                                                                            <li class="dropdown__option" value="re" role="button">Réunion (La Réunion) +262</li>
+                                                                            <li class="dropdown__option" value="ro" role="button">Romania (România) +40</li>
+                                                                            <li class="dropdown__option" value="ru" role="button">Russia (Россия) +7</li>
+                                                                            <li class="dropdown__option" value="rw" role="button">Rwanda +250</li>
+                                                                            <li class="dropdown__option" value="bl" role="button">Saint Barthélemy (Saint-Barthélemy) +590</li>
+                                                                            <li class="dropdown__option" value="sh" role="button">Saint Helena +290</li>
+                                                                            <li class="dropdown__option" value="kn" role="button">Saint Kitts and Nevis +1</li>
+                                                                            <li class="dropdown__option" value="lc" role="button">Saint Lucia +1</li>
+                                                                            <li class="dropdown__option" value="mf" role="button">Saint Martin (Saint-Martin (partie française)) +590</li>
+                                                                            <li class="dropdown__option" value="pm" role="button">Saint Pierre and Miquelon (Saint-Pierre-et-Miquelon) +508</li>
+                                                                            <li class="dropdown__option" value="vc" role="button">Saint Vincent and the Grenadines +1</li>
+                                                                            <li class="dropdown__option" value="ws" role="button">Samoa +685</li>
+                                                                            <li class="dropdown__option" value="sm" role="button">San Marino +378</li>
+                                                                            <li class="dropdown__option" value="st" role="button">São Tomé and Príncipe (São Tomé e Príncipe) +239</li>
+                                                                            <li class="dropdown__option" value="sa" role="button">Saudi Arabia (&#x202B;المملكة العربية السعودية&#x202C;&lrm;) +966</li>
+                                                                            <li class="dropdown__option" value="sn" role="button">Senegal (Sénégal) +221</li>
+                                                                            <li class="dropdown__option" value="rs" role="button">Serbia (Србија) +381</li>
+                                                                            <li class="dropdown__option" value="sc" role="button">Seychelles +248</li>
+                                                                            <li class="dropdown__option" value="sl" role="button">Sierra Leone +232</li>
+                                                                            <li class="dropdown__option" value="sg" role="button">Singapore +65</li>
+                                                                            <li class="dropdown__option" value="sx" role="button">Sint Maarten +1</li>
+                                                                            <li class="dropdown__option" value="sk" role="button">Slovakia (Slovensko) +421</li>
+                                                                            <li class="dropdown__option" value="si" role="button">Slovenia (Slovenija) +386</li>
+                                                                            <li class="dropdown__option" value="sb" role="button">Solomon Islands +677</li>
+                                                                            <li class="dropdown__option" value="so" role="button">Somalia (Soomaaliya) +252</li>
+                                                                            <li class="dropdown__option" value="za" role="button">South Africa +27</li>
+                                                                            <li class="dropdown__option" value="kr" role="button">South Korea (대한민국) +82</li>
+                                                                            <li class="dropdown__option" value="ss" role="button">South Sudan (&#x202B;جنوب السودان&#x202C;&lrm;) +211</li>
+                                                                            <li class="dropdown__option" value="es" role="button">Spain (España) +34</li>
+                                                                            <li class="dropdown__option" value="lk" role="button">Sri Lanka (ශ්&zwj;රී ලංකාව) +94</li>
+                                                                            <li class="dropdown__option" value="sd" role="button">Sudan (&#x202B;السودان&#x202C;&lrm;) +249</li>
+                                                                            <li class="dropdown__option" value="sr" role="button">Suriname +597</li>
+                                                                            <li class="dropdown__option" value="sj" role="button">Svalbard and Jan Mayen +47</li>
+                                                                            <li class="dropdown__option" value="sz" role="button">Swaziland +268</li>
+                                                                            <li class="dropdown__option" value="se" role="button">Sweden (Sverige) +46</li>
+                                                                            <li class="dropdown__option" value="ch" role="button">Switzerland (Schweiz) +41</li>
+                                                                            <li class="dropdown__option" value="sy" role="button">Syria (&#x202B;سوريا&#x202C;&lrm;) +963</li>
+                                                                            <li class="dropdown__option" value="tw" role="button">Taiwan (台灣) +886</li>
+                                                                            <li class="dropdown__option" value="tj" role="button">Tajikistan +992</li>
+                                                                            <li class="dropdown__option" value="tz" role="button">Tanzania +255</li>
+                                                                            <li class="dropdown__option" value="th" role="button">Thailand (ไทย) +66</li>
+                                                                            <li class="dropdown__option" value="tl" role="button">Timor-Leste +670</li>
+                                                                            <li class="dropdown__option" value="tg" role="button">Togo +228</li>
+                                                                            <li class="dropdown__option" value="tk" role="button">Tokelau +690</li>
+                                                                            <li class="dropdown__option" value="to" role="button">Tonga +676</li>
+                                                                            <li class="dropdown__option" value="tt" role="button">Trinidad and Tobago +1</li>
+                                                                            <li class="dropdown__option" value="tn" role="button">Tunisia (&#x202B;تونس&#x202C;&lrm;) +216</li>
+                                                                            <li class="dropdown__option" value="tr" role="button">Turkey (Türkiye) +90</li>
+                                                                            <li class="dropdown__option" value="tm" role="button">Turkmenistan +993</li>
+                                                                            <li class="dropdown__option" value="tc" role="button">Turks and Caicos Islands +1</li>
+                                                                            <li class="dropdown__option" value="tv" role="button">Tuvalu +688</li>
+                                                                            <li class="dropdown__option" value="vi" role="button">U.S. Virgin Islands +1</li>
+                                                                            <li class="dropdown__option" value="ug" role="button">Uganda +256</li>
+                                                                            <li class="dropdown__option" value="ua" role="button">Ukraine (Україна) +380</li>
+                                                                            <li class="dropdown__option" value="ae" role="button">United Arab Emirates (&#x202B;الإمارات العربية المتحدة&#x202C;&lrm;) +971</li>
+                                                                            <li class="dropdown__option" value="gb" role="button">United Kingdom +44</li>
+                                                                            <li class="dropdown__option" value="us" role="button">United States +1</li>
+                                                                            <li class="dropdown__option" value="uy" role="button">Uruguay +598</li>
+                                                                            <li class="dropdown__option" value="uz" role="button">Uzbekistan (Oʻzbekiston) +998</li>
+                                                                            <li class="dropdown__option" value="vu" role="button">Vanuatu +678</li>
+                                                                            <li class="dropdown__option" value="va" role="button">Vatican City (Città del Vaticano) +39</li>
+                                                                            <li class="dropdown__option" value="ve" role="button">Venezuela +58</li>
+                                                                            <li class="dropdown__option" value="vn" role="button">Vietnam (Việt Nam) +84</li>
+                                                                            <li class="dropdown__option" value="wf" role="button">Wallis and Futuna +681</li>
+                                                                            <li class="dropdown__option" value="eh" role="button">Western Sahara (&#x202B;الصحراء الغربية&#x202C;&lrm;) +212</li>
+                                                                            <li class="dropdown__option" value="ye" role="button">Yemen (&#x202B;اليمن&#x202C;&lrm;) +967</li>
+                                                                            <li class="dropdown__option" value="zm" role="button">Zambia +260</li>
+                                                                            <li class="dropdown__option" value="zw" role="button">Zimbabwe +263</li>
+                                                                            <li class="dropdown__option" value="ax" role="button">Åland Islands +358</li>
+                                                                            </span>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="phone-input__number placeholder-shown"><input class="text-input" type="number" data-id="text-input" id="phone" type="text" autocomplete="on" inputmode="numeric"></input><label class="float-label__label" for="phone">Phone</label></div>
+                                                            </div>
+                                                            <div data-skcomponent="skerrormessage" class="field-message field-message--error" data-skerrorid="phone"></div>
+                                                        </div>
+                                                        <div class="buttons">
+                                                            <button data-skcomponent="skbutton" data-skbuttontype="form-submit" data-skbuttonvalue="submit" data-skform="phone-form" id="submit" style="color: #fff;">Next</button>
+                                                            <!--<button data-skcomponent="skbutton" data-skbuttontype="back-to-previous" data-skbuttonvalue="cancel" id="cancel">Cancel</button>-->
+
+                                                        </div>
+                                                        <div class="text-block branding-template-link-container">
+                                                            <div class="text-block--overflow-wrap">
+                                                                <a data-skcomponent="skbutton" data-skbuttontype="back-to-previous" class="branding-template-link-text link-text" href="#" data-skbuttonvalue="cancel" id="cancel">Cancel</a>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <typescript> @import url(https://azr47-us-authx-ui-devlocal.azurewebsites.net/c7f3fc1f-8741-4151-bbb6-8b2059c4fff1/js/site.js) @import url(https://azr47-us-authx-ui-devlocal.azurewebsites.net/c7f3fc1f-8741-4151-bbb6-8b2059c4fff1/js/default_signup_signin.js) @import url(https://azr47-us-authx-ui-devlocal.azurewebsites.net/c7f3fc1f-8741-4151-bbb6-8b2059c4fff1/js/common.js) </typescript>
+    <div id="piggyWrapper" style="position: fixed; top: 0px; right: 0px; line-height: initial; z-index: 2147483647; width: auto; font-family: &quot; Open Sans&quot;, sans-serif; font-size: initial; display: block;"></div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "umpg_account_text": "Lütfen unutmayın – UMPG Şarkıları hesabınızı etkinleştirmeseniz bile UMPG'den ilgili satış konuşmaları ve pazarlama iletişimleri almaya devam edeceksiniz.",
+  "umpg_default_company": "Universal Music Publishing Group",
+  "umpg_signup_header": "UMPG Şarkılarına Hoş Geldiniz",
+  "umpg-default-invite2": "",
+  "umpg-thanks-verify": "doğruladığınız için teşekkürler", //UMPG OTP Changes
+  "umpg-account": "hesap", //UMPG OTP Changes
+  "umpg-verify-code": "Kodunuz:", //UMPG OTP Changes
+  "umpg-email-signature": "İçtenlikle,",
+  "default-invite1": "davetlisiniz",
+  "default-create": "Hesap oluştur",
+  "default-create-account-text": "Hesabınızı oluşturmak için lütfen aşağıdaki butona tıklayın.",
+  "umpg_forgot_password_title": "UMPG Songs için Güvenlik Güncellemesi",
+  "umpg_reset_password_steps": "Azure AD Security uygulamasının UMPG Songs'a eklenmesi hakkında sizi bilgilendirmek için iletişime geçiyoruz. Songs hesabınıza erişim elde etmek için aşağıdaki basit adımları izleyerek yeni bir şifre belirlemeniz gerekecektir;",
+  "umpg_step_1": "Umusicpub.com'u ziyaret edin",
+  "umpg_step_2": "'Giriş'e gidin",
+  "umpg_step_3": "'Parolanızı mı Unuttunuz / Parolanızı Sıfırlayın' bağlantısını seçin ve yeni bir parola belirlemek için talimatları izleyin",
+  "umpg_note": "Lütfen unutmayın – UMPG Songs hesabınızı etkinleştirmeseniz bile UMPG'den ilgili satış ve pazarlama bildirimleri almaya devam edeceksiniz.",
+  "umpg_signature": "Saygılarımızla",
+  "umpg_forgot_password_subject": "UMPG Songs Güvenlik Güncellemesi"
+}

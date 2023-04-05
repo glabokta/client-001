@@ -1,0 +1,142 @@
+﻿<html>
+<head>
+    <title>MFA-Option </title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href=https://authx-assets-dev.azureedge.net/assets/universal-logo-150x150.png sizes="32x32">
+    <style>
+        @import url("https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.5/css/bootstrap.min.css");
+        @import url("https://fonts.googleapis.com/css2?family=Glegoo:wght@400;700&amp;display=swap");
+
+        @import url("https://azr47-us-authx-ui-devlocal.azurewebsites.net/c7f3fc1f-8741-4151-bbb6-8b2059c4fff1/css/site.css");
+        @import url("https://azr47-us-authx-ui-devlocal.azurewebsites.net/c7f3fc1f-8741-4151-bbb6-8b2059c4fff1/css/default_signup_signin.css");
+
+        body,
+        .page {
+            /*height: 100vh !important;*/
+            /* You must set a specified height */
+            background-position: center;
+            /* Center the image */
+            background-repeat: no-repeat;
+            /* Do not repeat the image */
+            background-size: cover;
+            /* Resize the background image to cover the entire container */
+        }
+    </style>
+</head>
+<body style="">
+
+    <img data-tenant-branding-background="true" src="https://azr47-us-authx-ui-devlocal.azurewebsites.net/c7f3fc1f-8741-4151-bbb6-8b2059c4fff1/BackgroundImage/oscar-keys-medium1.jpg">
+    <div class="panel-body">
+        <div class="container" style="width: 500px">
+            <!--<div class="row company-logo">
+                <img data-tenant-branding-logo="true" src="https://azr47-us-authx-ui-devlocal.azurewebsites.net/03781782-2c30-4e75-b72e-9afb59c17d4d/Logo/umg-logo%402x.png">
+            </div>-->
+            <div class="row company-logo">
+                <!--<img data-tenant-branding-logo="true" src="https://azr47-us-authx-ui-devlocal.azurewebsites.net/c7f3fc1f-8741-4151-bbb6-8b2059c4fff1/Logo/umg-logo%402x.png">-->
+
+
+                <img src="https://azr47-us-authx-ui-devlocal.azurewebsites.net/c7f3fc1f-8741-4151-bbb6-8b2059c4fff1/Logo/logo.ee7cd8ed.svg" class="App-logo" alt="logo">
+
+
+            </div>
+            <div id="api" data-name="Unified" class="row">
+
+                <div style="max-width: 400px; width: 100%">
+                    <div class="">
+
+                        <div class="">
+
+
+
+
+
+
+
+                            <!--<img class="align-self-center mb-5" src=" companyLogo {{global.variables.companyLogo}}✕" alt="companyName {{global.variables.companyName}}
+                            ✕" style="width: 65px; height: 65px;" />-->
+                            <!--  <img alt="Company Logo" class="companyLogo" data-tenant-branding-logo="true" src=https://authx-assets-dev.azureedge.net/assets/umg-logo%402x.png>-->
+                            <h3 class="text-center mb-4" style=" color :white ">
+                                Account Recovery
+                            </h3>
+
+                            <p class="text-muted text-center">
+
+
+
+                            </p>
+                            <p class="text-danger mdi mdi-alert-circle" data-id="feedback" data-skcomponent="skerror"></p>
+                            <form id="usernamePasswordForm" data-id="usernamePasswordForm">
+
+
+
+                                <!--<label class="form-label" for="username">Username</label>
+                                <div class="mb-4 form-floating">
+                                    <input class="form-control" type="text" id="username" name="username" placeholder="Username" autocomplete="off" value="" data-id="username-input" />
+                                </div>
+                                <div class="d-flex flex-column mt-5">
+                                    <button data-id="button" type="submit" class="btn btn-primary mb-3" data-skcomponent="skbutton" data-skbuttontype="form-submit" data-skform="usernamePasswordForm" data-skbuttonvalue="submit">
+                                        Send my Email OTP Code
+                                    </button>
+                                </div>-->
+
+                                <div class="entry">
+                                    <div class="entry-item">
+                                        <label for="signInName">
+                                            Email Address
+                                        </label>
+                                        <div class="error itemLevel" aria-hidden="true" role="alert" style="display: none;">
+                                            <p></p>
+                                        </div>
+                                        <input class="form-control"
+                                               type="text" pattern="^[a-zA-Z0-9.!#$%&amp;’'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
+                                               id="username" aria-label="Email Address"
+                                               name="username"
+                                               placeholder="Email Address"
+                                               autocomplete="off"
+                                               value=""
+                                               data-id="username-input" />
+
+                                    </div>
+                                    <!--<div class="entry-item">
+
+                                        <div class="error itemLevel" aria-hidden="true" style="display: none;">
+                                            <p role="alert"></p>
+                                        </div>
+                                        <label for="password">
+                                            password
+                                        </label>
+                                        <input class="form-control"
+                                               type="password"
+                                               id="password"
+                                               name="password" aria-label="Password"
+                                               placeholder="Password"
+                                               autocomplete="off"
+                                               data-id="password-input" />
+                                    </div>-->
+                                    <div class="working"></div>
+                                    <div class="buttons">
+
+                                        <button data-id="button" type="submit" class="btn btn-primary mb-3" data-skcomponent="skbutton" data-skbuttontype="form-submit" data-skform="usernamePasswordForm" data-skbuttonvalue="submit">
+                                            Send my Email OTP Code
+                                        </button>
+
+                                    </div>
+                                </div>
+
+
+
+
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

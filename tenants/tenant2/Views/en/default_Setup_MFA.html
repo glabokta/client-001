@@ -1,0 +1,94 @@
+﻿<html lang="en">
+<head>
+    <title>Setup-MFA</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href=https://authx-assets-dev.azureedge.net/assets/universal-logo-150x150.png sizes="32x32">
+    <style>
+        @import url(https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.5/css/bootstrap.min.css);
+        @import url(https://fonts.googleapis.com/css2?family=Glegoo:wght@400;700&amp;display=swap);
+        @import url(https://azr47-us-authx-ui-devlocal.azurewebsites.net/c7f3fc1f-8741-4151-bbb6-8b2059c4fff1/css/site.css);
+        @import url(https://azr47-us-authx-ui-devlocal.azurewebsites.net/c7f3fc1f-8741-4151-bbb6-8b2059c4fff1/css/default_Setup_MFA.css);
+        @import url(https://azr47-us-authx-ui-devlocal.azurewebsites.net/c7f3fc1f-8741-4151-bbb6-8b2059c4fff1/css/mfa_phone.css);
+
+        body,
+        .page {
+            /*height: 100vh !important;*/
+            /* You must set a specified height */
+            background-position: center;
+            /* Center the image */
+            background-repeat: no-repeat;
+            /* Do not repeat the image */
+            background-size: cover;
+            /* Resize the background image to cover the entire container */
+        }
+    </style>
+</head>
+<body style="">
+    <img data-tenant-branding-background="true" src=https://azr47-us-authx-ui-devlocal.azurewebsites.net/c7f3fc1f-8741-4151-bbb6-8b2059c4fff1/BackgroundImage/oscar-keys-medium.jpg>
+    <div class="panel-body">
+        <div class="container  self_asserted_container ">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <!--  <img alt="Company Logo" class="companyLogo" data-tenant-branding-logo="true" src=https://authx-assets-dev.azureedge.net/assets/umg-logo%402x.png>-->
+                            <img style="height :120px" src="https://azr47-us-authx-ui-devlocal.azurewebsites.net/c7f3fc1f-8741-4151-bbb6-8b2059c4fff1/Logo/logo.ee7cd8ed.svg" class="App-logo" alt="logo">
+
+                            <div id="api" data-name="SelfAsserted">
+                                <div class="intro">
+                                    <p>Please provide the following details.</p>
+                                </div>
+
+                                <div class="">
+                                    <div class="">
+                                        <div class="">
+                                            <div class="flex-container">
+                                                <div class="branding-template-logo-container">
+
+                                                </div>
+                                                <div class="branding-template-form-container">
+                                                    <center><h1 class="heading branding-template-heading">Setup MFA</h1></center>
+                                                    <div class="text-block branding-template-primary-text">
+                                                        <div class="text-block--overflow-wrap">
+                                                            To enhance the security of your account, you will need to enroll in multifactor authentication (MFA).
+
+                                                        </div>
+                                                    </div>
+                                                    <form class="form" data-id="form" id="welcome-form">
+                                                        <div>
+                                                            <input type="hidden" name="webAuthenSupport" id="webAuthenSupport" />
+                                                            <center>
+                                                                <button class="button file-input--button branding-template-primary-button button--primary brand-primary-bg"
+                                                                        type="button"
+                                                                        data-skcomponent="skbutton"
+                                                                        data-skbuttonvalue="next"
+                                                                        id="next"
+                                                                        data-skform="welcome-form"
+                                                                        data-skbuttontype="form-submit">
+                                                                    Setup
+                                                                </button>
+                                                            </center>
+                                                        </div>
+                                                        <!--<div class="text-block branding-template-link-container">
+                                    <div class="text-block--overflow-wrap">
+                                        <center><a data-skcomponent="skbutton" data-skbuttontype="next-event" class="branding-template-link-text  link-text" href="#" data-skbuttonvalue="skip" id="skip">Skip</a></center>
+                                    </div>
+                                </div>-->
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <typescript> @import url(https://azr47-us-authx-ui-devlocal.azurewebsites.net/c7f3fc1f-8741-4151-bbb6-8b2059c4fff1/js/site.js) @import url(https://azr47-us-authx-ui-devlocal.azurewebsites.net/c7f3fc1f-8741-4151-bbb6-8b2059c4fff1/js/default_signup_signin.js) @import url(https://azr47-us-authx-ui-devlocal.azurewebsites.net/c7f3fc1f-8741-4151-bbb6-8b2059c4fff1/js/common.js) </typescript>
+    <div id="piggyWrapper" style="position: fixed; top: 0px; right: 0px; line-height: initial; z-index: 2147483647; width: auto; font-family: &quot; Open Sans&quot;, sans-serif; font-size: initial; display: block;"></div>
+</body>
+</html>
