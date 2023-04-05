@@ -1,0 +1,21 @@
+{
+  "umpg_account_text": "Tenga en cuenta que seguirá recibiendo presentaciones y comunicaciones de marketing relevantes de UMPG, incluso si no activa su cuenta de UMPG Songs.",
+  "umpg_default_company": "Universal Music Publishing Group",
+  "umpg_signup_header": "Bienvenido a las canciones de UMPG",
+  "umpg-default-invite2": "",
+  "umpg-thanks-verify": "Gracias por verificar su", //UMPG OTP Changes
+  "umpg-account": "cuenta", //UMPG OTP Changes
+  "umpg-verify-code": "Tu código es:", //UMPG OTP Changes
+  "umpg-email-signature": "Sinceramente,",
+  "default-invite1": "Tu estas invitado a",
+  "default-create-account-text": "Por favor, haga clic en el botón de abajo para crear su cuenta.",
+  "default-create": "Crear una cuenta",
+  "umpg_forgot_password_title": "Actualización de seguridad de UMPG Songs",
+  "umpg_reset_password_steps": "Estamos contactando con Ud. con el objetivo de informarle de la implementación de seguridad de Azure AD en UMPG Songs. Para poder acceder a su cuenta de Songs, necesitará crear una nueva contraseña siguiendo estos sencillos pasos:",
+  "umpg_step_1": "Visite Umusicpub.com",
+  "umpg_step_2": "Vaya a \"Entrar\"",
+  "umpg_step_3": "Seleccione \"He olvidado mi contraseña\" y siga las instrucciones para crear una nueva contraseña",
+  "umpg_note": "Por favor, tenga en cuenta que seguirá recibiendo selecciones musicales y comunicaciones de marketing relevantes de UMPG, incluso si no activa su cuenta de UMPG Songs",
+  "umpg_signature": "Atentamente",
+  "umpg_forgot_password_subject": "Actualización de Seguridad de UMPG Songs"
+}

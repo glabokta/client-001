@@ -1,0 +1,448 @@
+﻿.panel-body {
+    position: relative;
+    min-height: 100%;
+    min-height: 100vh;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+/*.App-logo {
+    -webkit-animation: App-logo-spin 20s linear infinite;
+    animation: App-logo-spin 20s linear infinite;
+}*/
+
+
+@media screen and (prefers-reduced-motion: no-preference) {
+    img.App-logo {
+        -webkit-animation: App-logo-spin 20s linear infinite;
+        animation: App-logo-spin 20s linear infinite;
+        -webkit-animation: fadeIn 1s;
+    }
+}
+
+img.App-logo {
+    width: 190px;
+    height: 190px;
+}
+
+
+
+
+
+
+.no_display {
+    display: none
+}
+
+.error_container h1 {
+    color: #333;
+    font-size: 1.2em;
+    font-family: 'Segoe UI Light',Segoe,'Segoe UI',SegoeUI-Light-final,Tahoma,Helvetica,Arial,sans-serif;
+    font-weight: lighter
+}
+
+.error_container p {
+    color: #333;
+    font-size: .8em;
+    font-family: 'Segoe UI',Segoe,SegoeUI-Regular-final,Tahoma,Helvetica,Arial,sans-serif;
+    margin: 14px 0
+}
+
+.company-logo {
+    /*padding: 25px 0 25px 0;*/
+}
+
+.panel-body img {
+    max-width: 100%;
+    width: 170px;
+    height: 170px;
+    margin: 0 auto;
+    display: block
+}
+
+#api {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+    #api .intro {
+        display: block;
+        text-align: left;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+
+        #api .intro h2 {
+            font-size: 1.2em;
+            font-weight: 600;
+            margin: 0;
+            color: white
+        }
+
+    #api .divider {
+        display: none
+    }
+
+    #api .localAccount .error {
+        color: #b00;
+        text-align: left
+    }
+
+    #api .localAccount .entry .buttons {
+        margin: 0 0 23px 0;
+        text-align: left
+    }
+
+        #api .localAccount .entry .buttons button {
+            height: inherit;
+            height: 50px;
+            margin-bottom: 10px;
+            margin-top: 20px;
+            color: #ffffff;
+        }
+
+    #api .localAccount .entry .entry-item {
+        position: relative;
+        width: 100%;
+        padding-top: 6px;
+        padding-bottom: 6px;
+        display: block
+    }
+
+        #api .localAccount .entry .entry-item input {
+            outline: 0;
+            background-color: #fff !important;
+            background-image: none !important;
+            color: #555;
+            display: inline-block;
+            font-size: 0.9em;
+            /*height: 50px;*/
+            line-height: 1.42857143;
+            padding: 6px 20px;
+            width: 100% !important;
+        }
+
+        #api .localAccount .entry .entry-item #password {
+            margin-bottom: 20px
+        }
+
+    #api .localAccount .entry .entry-item {
+        text-align: left;
+    }
+
+@keyframes slideInFromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(50%)
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0)
+    }
+}
+
+#api .localAccount .entry .entry-item .password-label #forgotPassword {
+    position: absolute;
+    bottom: 0;
+    clear: right;
+    cursor: pointer;
+    float: right;
+    text-align: right
+}
+
+#api .localAccount .rememberMe {
+    position: absolute;
+    right: 50px;
+    display: inline-block;
+    margin-top: -20px
+}
+
+.working {
+    display: none
+}
+
+#PasswordResetUsingEmailAddressExchange {
+    font-size: 0.8em;
+    font-weight: 600;
+}
+
+#api .claims-provider-list-text-links p, #api .localAccount .create {
+    padding-top: 20px;
+}
+
+    #api .claims-provider-list-text-links p, #api .localAccount .create p {
+        text-align: left;
+        margin-top: -3rem;
+        margin-bottom: 3rem;
+        font-size: 0.9em;
+    }
+
+    #api .localAccount .create #createAccount {
+        display: inline-block;
+        font-weight: 600;
+        height: inherit;
+        line-height: 1.3333333;
+        padding: 10px 16px;
+        text-align: center;
+        touch-action: manipulation;
+        user-select: none;
+        white-space: nowrap;
+        -moz-user-select: none;
+        -ms-touch-action: manipulation;
+        -ms-user-select: none;
+        -webkit-user-select: none;
+        width: auto;
+        margin-top: -3rem;
+        cursor: pointer;
+    }
+
+#api .social {
+    text-align: left;
+    padding-right: 0;
+    padding-left: 40px;
+}
+
+    #api .social .social-title {
+        margin-bottom: 0px;
+    }
+
+    #api .social .options .row div {
+        padding: 0 10px 0 0;
+    }
+
+#api .accountButton {
+    background-size: 20px 20px;
+    background-position-x: 3%;
+    background-position-y: 50%;
+    background-repeat: no-repeat;
+    background-color: #FFFFFF;
+    display: block;
+    font-size: 0.9em;
+    height: 35px;
+    width: 100%;
+    overflow: hidden;
+    max-width: 380px
+}
+
+#api button#UMGExchange.accountButton {
+    background-size: 30px 30px;
+    font-size: .8em;
+}
+
+#api .accountButton:hover {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    color: #fff
+}
+
+.padding-right {
+    padding-right: 30px;
+}
+
+.padding-left {
+    padding-left: 30px;
+}
+
+.margin-top {
+    margin-top: 30px;
+}
+
+.margin-bottom {
+    margin-bottom: 30px;
+}
+
+.footer-text {
+    font-size: 0.8em;
+}
+
+.local-container {
+    border-right: 1px solid #d0d0d0;
+    padding-left: 0;
+    padding-right: 40px;
+}
+
+.social-button {
+    padding-left: 0px;
+}
+
+.social .options div.social-button:nth-child(even) {
+    padding-right: 0;
+}
+
+@media screen and (max-width: 990px) {
+    .local-container, #api .social {
+        border-right: none;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+@media (max-width:400px) {
+    #api {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+        #api button#UMGExchange.accountButton {
+            background-size: 20px 20px;
+            font-size: .8em;
+        }
+}
+
+.container {
+    text-align: center;
+    /*background: #f5f5f5 0% 0% no-repeat padding-box;*/
+    background: #272d13 0% 0% no-repeat padding-box;
+    max-width: 600px;
+    height: 830px
+}
+
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+label {
+    font-size: 0.9em;
+    color: white
+}
+
+#attributeList ul li.EmailBox label, #attributeList ul li.Password label, #attributeList ul li.TextBox label {
+    display: none !important
+}
+
+#attributeList ul li .attrEntry .verify {
+    margin-top: 2rem;
+    padding-bottom: 10px;
+    position: relative
+}
+
+    #attributeList ul li .attrEntry .verify #email_ver_but_send {
+        width: 60%;
+        height: 50px;
+        background-color: #296ec6;
+        color: #fff;
+        border-radius: .5rem
+    }
+
+        #attributeList ul li .attrEntry .verify #email_ver_but_send:hover {
+            background-color: #1662c7
+        }
+
+    #attributeList ul li .attrEntry .verify #email_ver_but_verify {
+        width: inherit;
+        padding: 0 20px;
+        height: 50px;
+        background-color: #296ec6;
+        color: #fff;
+        margin-right: 5px;
+        border-radius: .5rem
+    }
+
+        #attributeList ul li .attrEntry .verify #email_ver_but_verify:hover {
+            background-color: #1662c7
+        }
+
+    #attributeList ul li .attrEntry .verify #email_ver_but_resend {
+        width: inherit;
+        padding: 0 20px;
+        border: 0;
+        font-size: 0.9em;
+        height: 50px;
+        right: 0;
+        bottom: -38px;
+        background-color: #296ec6;
+        color: #fff;
+        border-radius: .5rem
+    }
+
+        #attributeList ul li .attrEntry .verify #email_ver_but_resend:hover {
+            background-color: #1662c7
+        }
+
+    #attributeList ul li .attrEntry .verify #email_ver_but_edit {
+        border: none;
+        color: #fff;
+        background-color: #296ec6;
+        width: 60%;
+        height: 50px;
+        border-radius: .5rem
+    }
+
+        #attributeList ul li .attrEntry .verify #email_ver_but_edit:hover {
+            background-color: #1662c7
+        }
+
+    #attributeList ul li .attrEntry .verify #email_ver_input_label {
+        display: none !important
+    }
+
+#attributeList ul li .attrEntry .itemLevel {
+    display: none
+}
+
+#attributeList ul li .attrEntry .dropdown_single {
+    height: 45px;
+    border-radius: .5rem;
+    width: 100%;
+    padding-left: 15px;
+    box-shadow: 0 2px 10px rgba(0,0,150,.15)
+}
+
+#attributeList ul li .attrEntry div#cpiminternal_dateOfBirth.date {
+    display: table;
+    width: 100%
+}
+
+    #attributeList ul li .attrEntry div#cpiminternal_dateOfBirth.date select {
+        border-radius: .5rem;
+        display: table-cell;
+        height: 50px;
+        box-shadow: 0 2px 10px rgba(0,0,150,.15);
+        padding-left: 15px
+    }
+
+#attributeList ul li .attrEntry div#cpiminternal_dateOfBirth select#cpiminternal_dateOfBirth_day.day {
+    margin-right: 3%;
+    width: 23%
+}
+
+#attributeList ul li .attrEntry div#cpiminternal_dateOfBirth select#cpiminternal_dateOfBirth_month.month {
+    margin-right: 3%;
+    width: 38%
+}
+
+#attributeList ul li .attrEntry div#cpiminternal_dateOfBirth select#cpiminternal_dateOfBirth_year.year {
+    width: 33%
+}
+
+#attributeList ul li .helpLink {
+    display: none
+}
+
+#attributeVerification .buttons {
+    margin-top: 30px
+}
+
+body, html {
+    height: 100%
+}
+
+#submit, #skbutton_back-to-previous {
+    color: white;
+}

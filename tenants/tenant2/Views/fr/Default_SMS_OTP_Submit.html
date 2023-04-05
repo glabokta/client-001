@@ -1,0 +1,164 @@
+﻿<html lang="en">
+<head>
+    <title>Sign up </title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href=https://authx-assets-dev.azureedge.net/assets/universal-logo-150x150.png sizes="32x32">
+    <style>
+        @import url(https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.5/css/bootstrap.min.css);
+        @import url(https://fonts.googleapis.com/css2?family=Glegoo:wght@400;700&amp;display=swap);
+        @import url(https://azr47-us-authx-ui-devlocal.azurewebsites.net/c7f3fc1f-8741-4151-bbb6-8b2059c4fff1/css/site.css);
+        @import url(https://azr47-us-authx-ui-devlocal.azurewebsites.net/c7f3fc1f-8741-4151-bbb6-8b2059c4fff1/css/Default_SMS_OTP_Submit.css);
+        @import url(https://azr47-us-authx-ui-devlocal.azurewebsites.net/c7f3fc1f-8741-4151-bbb6-8b2059c4fff1/css/mfa_phone.css);
+
+        body,
+        .page {
+            /*height: 100vh !important;*/
+            /* You must set a specified height */
+            background-position: center;
+            /* Center the image */
+            background-repeat: no-repeat;
+            /* Do not repeat the image */
+            background-size: cover;
+            /* Resize the background image to cover the entire container */
+        }
+    </style>
+</head>
+<body style="">
+    <img data-tenant-branding-background="true" src=https://azr47-us-authx-ui-devlocal.azurewebsites.net/c7f3fc1f-8741-4151-bbb6-8b2059c4fff1/BackgroundImage/oscar-keys-medium.jpg>
+    <div class="panel-body">
+        <div class="container  self_asserted_container ">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <!--<img alt="Company Logo" class="companyLogo" data-tenant-branding-logo="true" src=https://authx-assets-dev.azureedge.net/assets/umg-logo%402x.png>-->
+
+
+                            <img style="height:120px" src="https://azr47-us-authx-ui-devlocal.azurewebsites.net/c7f3fc1f-8741-4151-bbb6-8b2059c4fff1/Logo/logo.ee7cd8ed.svg" class="App-logo" alt="logo">
+
+                            <div id="api" data-name="SelfAsserted">
+                                <div class="intro">
+                                    <p>Please provide the following details.</p>
+                                </div>
+                                <!-- <form id="attributeVerification" data-id="registrationForm">-->
+                                <div class="">
+                                    <div class="">
+                                        <div class="">
+                                            <div class="flex-container">
+                                                <div class="branding-template-logo-container">
+
+                                                </div>
+                                                <div class="branding-template-form-container">
+                                                    <h1 class="heading branding-template-heading">
+                                                        {{#ifEquals type "SMS"}}
+                                                        <svg viewBox="0 0 24 24" role="presentation" style="width: 32px; height: 32px;">
+                                                            <path d="M20,2A2,2 0 0,1 22,4V16A2,2 0 0,1 20,18H6L2,22V4C2,2.89 2.9,2 4,2H20M4,4V17.17L5.17,16H20V4H4M6,7H18V9H6V7M6,11H15V13H6V11Z" style="fill: rgb(61, 69, 77);"></path>
+                                                        </svg>
+                                                        <span class="text-left-to-icon">Text Message</span>
+                                                        {{/ifEquals}}
+                                                        {{#ifEquals type "VOICE"}}
+                                                        <svg viewBox="0 0 24 24" role="presentation" style="width: 32px; height: 32px;">
+                                                            <path d="M20,15.5C18.8,15.5 17.5,15.3 16.4,14.9C16.3,14.9 16.2,14.9 16.1,14.9C15.8,14.9 15.6,15 15.4,15.2L13.2,17.4C10.4,15.9 8,13.6 6.6,10.8L8.8,8.6C9.1,8.3 9.2,7.9 9,7.6C8.7,6.5 8.5,5.2 8.5,4C8.5,3.5 8,3 7.5,3H4C3.5,3 3,3.5 3,4C3,13.4 10.6,21 20,21C20.5,21 21,20.5 21,20V16.5C21,16 20.5,15.5 20,15.5M5,5H6.5C6.6,5.9 6.8,6.8 7,7.6L5.8,8.8C5.4,7.6 5.1,6.3 5,5M19,19C17.7,18.9 16.4,18.6 15.2,18.2L16.4,17C17.2,17.2 18.1,17.4 19,17.4V19Z" style="fill: rgb(61, 69, 77);"></path>
+                                                        </svg>
+                                                        <span class="text-left-to-icon">Voice</span>
+                                                        {{/ifEquals}}
+                                                        {{#ifEquals type "EMAIL"}}
+                                                        <svg viewBox="0 0 24 24" role="presentation" style="width: 32px; height: 32px;">
+                                                            <path d="M22 6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6M20 6L12 11L4 6H20M20 18H4V8L12 13L20 8V18Z" style="fill: rgb(61, 69, 77);"></path>
+                                                        </svg>
+                                                        <span class="text-left-to-icon">Email</span>
+                                                        {{/ifEquals}}
+                                                        {{#ifEquals type "TOTP"}}
+                                                        <svg viewBox="0 0 24 24" role="presentation" style="width: 32px; height: 32px;">
+                                                            <path d="M16,18H7V4H16M11.5,22A1.5,1.5 0 0,1 10,20.5A1.5,1.5 0 0,1 11.5,19A1.5,1.5 0 0,1 13,20.5A1.5,1.5 0 0,1 11.5,22M15.5,1H7.5A2.5,2.5 0 0,0 5,3.5V20.5A2.5,2.5 0 0,0 7.5,23H15.5A2.5,2.5 0 0,0 18,20.5V3.5A2.5,2.5 0 0,0 15.5,1Z" style="fill: rgb(61, 69, 77);"></path>
+                                                        </svg>
+                                                        <span class="text-left-to-icon">Authenticator App</span>
+                                                        {{/ifEquals}}
+                                                    </h1>
+                                                    <div class="text-block branding-template-primary-text">
+                                                        <div class="text-block--overflow-wrap">
+                                                            {{#ifEquals type "SMS"}}
+                                                            Enter the passcode you received to complete text message pairing.
+                                                            {{/ifEquals}}
+                                                            {{#ifEquals type "VOICE"}}
+                                                            Enter the passcode you received to complete voice message pairing.
+                                                            {{/ifEquals}}
+                                                            {{#ifEquals type "EMAIL"}}
+                                                            Enter the passcode you received to complete email pairing.
+                                                            {{/ifEquals}}
+                                                            {{#ifEquals type "TOTP"}}
+                                                            Enter the passcode you received to complete pairing.
+                                                            {{/ifEquals}}
+                                                        </div>
+                                                    </div>
+                                                    <div id="error-wrap"><div data-skcomponent="skerror" class="feedback branding-template-feedback feedback--error picon-error-triangle" data-skvisibility="" id="error-msg"></div> </div>
+                                                    <form class="form" id="otp-form">
+                                                        <div class="float-label placeholder-shown">
+                                                            <input class="text-input float-label__input branding-template-text-input passcode-input" id="passcode" autocomplete="on" value="" maxlength="6" type="text" />
+                                                            <label class="float-label__label" for="phone">Passcode</label>
+                                                            <div data-skcomponent="skerrormessage" class="field-message field-message--error" data-skerrorid="passcode"></div>
+                                                        </div>
+                                                        <div class="text-block branding-template-primary-text">
+                                                            <div class="text-block--overflow-wrap">
+                                                                {{#ifEquals type "SMS"}}
+                                                                Message sent to:<br>
+                                                                {{phone}}
+                                                                {{/ifEquals}}
+                                                                {{#ifEquals type "VOICE"}}
+                                                                Message sent to:<br>
+                                                                {{phone}}
+                                                                {{/ifEquals}}
+                                                                {{#ifEquals type "EMAIL"}}
+                                                                Email sent to:<br>
+                                                                {{email}}
+                                                                {{/ifEquals}}
+                                                            </div>
+                                                        </div>
+                                                        {{#ifEquals type "VOICE"}}
+                                                        <div class="text-block branding-template-link-container">
+                                                            <div class="text-block--overflow-wrap">
+                                                                <a data-skcomponent="skbutton" id="resend" data-skbuttontype="next-event" class="branding-template-link-text link-text" href="#" data-skbuttonvalue="resend" type="button">Resend passcode</a>
+                                                            </div>
+                                                        </div>
+                                                        {{/ifEquals}}
+                                                        {{#ifEquals type "SMS"}}
+                                                        <div class="text-block branding-template-link-container">
+                                                            <div class="text-block--overflow-wrap">
+                                                                <a data-skcomponent="skbutton" id="resend" data-skbuttontype="next-event" class="button file-input--button branding-template-primary-button button--primary brand-primary-bg" href="#" data-skbuttonvalue="resend" type="button">Resend passcode</a>
+                                                            </div>
+                                                        </div>
+                                                        {{/ifEquals}}
+                                                        {{#ifEquals type "EMAIL"}}
+                                                        <div class="text-block branding-template-link-container">
+                                                            <div class="text-block--overflow-wrap">
+                                                                <a data-skcomponent="skbutton" id="resend" data-skbuttontype="next-event" class="branding-template-link-text link-text" href="#" data-skbuttonvalue="resend" type="button">Resend passcode</a>
+                                                            </div>
+                                                        </div>
+                                                        {{/ifEquals}}
+                                                        <div>
+                                                            <button data-skcomponent="skbutton" data-skbuttontype="form-submit" class="button file-input--button branding-template-primary-button button--primary brand-primary-bg" data-skbuttonvalue="submit" data-skform="otp-form" id="submit" type="submit">Finish</button>
+                                                        </div>
+                                                        <div class="text-block branding-template-link-container">
+                                                            <div class="text-block--overflow-wrap">
+                                                                <a data-skcomponent="skbutton" data-skbuttontype="next-event" id="cancel" class="button file-input--button branding-template-primary-button button--primary brand-primary-bg" href="#" data-skbuttonvalue="cancel">Cancel</a>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <typescript> @import url(https://azr47-us-authx-ui-devlocal.azurewebsites.net/c7f3fc1f-8741-4151-bbb6-8b2059c4fff1/js/site.js) @import url(https://azr47-us-authx-ui-devlocal.azurewebsites.net/c7f3fc1f-8741-4151-bbb6-8b2059c4fff1/js/default_signup_signin.js) @import url(https://azr47-us-authx-ui-devlocal.azurewebsites.net/c7f3fc1f-8741-4151-bbb6-8b2059c4fff1/js/common.js) </typescript>
+        <div id="piggyWrapper" style="position: fixed; top: 0px; right: 0px; line-height: initial; z-index: 2147483647; width: auto; font-family: &quot; Open Sans&quot;, sans-serif; font-size: initial; display: block;"></div>
+</body>
+</html>

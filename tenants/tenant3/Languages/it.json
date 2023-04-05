@@ -1,0 +1,11 @@
+{
+  "umpg_default_company": "Universal Music Publishing Group",
+  "umpg_forgot_password_title": "Aggiornamento di sicurezza per UMPG Songs",
+  "umpg_reset_password_steps": "Ti contattiamo per informarti dell' implementazione di Azure AD Security per UMPG Songs. Per accedere al tuo account su Songs, dovrai impostare una nuova password seguendo questi semplici step:",
+  "umpg_step_1": "Visita il sito umusicpub.com",
+  "umpg_step_2": "Vai al \"login\"",
+  "umpg_step_3": "Seleziona il link \" Password Dimenticata / Reimposta la password e segui le istruzioni per impostare una nuova password",
+  "umpg_note": "Nota: continuerai a ricevere pitch e comunicazioni di marketing da parte di UMPG, anche se il tuo account non è attivo",
+  "umpg_signature": "Cordiali saluti",
+  "umpg_forgot_password_subject": "Aggiornamento di sicurezza di UMPG Songs"
+}
