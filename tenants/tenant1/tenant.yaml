@@ -255,7 +255,7 @@ themes:
       widget_border_weight: 0
       show_widget_shadow: true
     colors:
-      primary_button: '#2BB3E2'
+      primary_button: '#999999'
       primary_button_label: '#ffffff'
       secondary_button_border: '#c9cace'
       secondary_button_label: '#1e212a'
