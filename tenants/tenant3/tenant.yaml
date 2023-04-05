@@ -202,6 +202,7 @@ attackProtection:
         max_attempts: 50
         rate: 1200
 logStreams: []
+themes:
   - borders:
       button_border_weight: 1
       buttons_style: rounded
