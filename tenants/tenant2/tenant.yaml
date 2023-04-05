@@ -7,7 +7,7 @@ pages:
     html: ./tenants/tenant2/pages/guardian_multifactor.html
   - name: login
     enabled: true
-    html: ./tenants/tenant2/Views/en/default_signin_signup.html
+    html: ./tenants/tenant2/Views/en/default_signup_signin.html
   - name: password_reset
     enabled: true
     html: ./tenants/tenant2/pages/password_reset.html
